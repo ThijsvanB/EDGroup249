@@ -5,4 +5,4 @@ IWPstyle.css contains the css code for index.html and about.html. \
 loginstyle.css contains the css code for login.html and signup.html. \
 pexels-huy-phan-3153522.jpg is the background image for the website. \
 action_page.php contains the php code for logging in. \
-the other php files contain tests to see if php is working on my device. \
+the other php files contain tests to see if php is working on my device. 
