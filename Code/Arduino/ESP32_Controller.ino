@@ -1,7 +1,9 @@
 #include <WiFi.h>
+#include <HTTPClient.h>
 
 const char* ssid = "";
 const char* password = "";
+const char* domain = "iwaterplant.infinityfreeapp.com";
 
 void setup() {
   initWiFi();
@@ -18,9 +20,29 @@ void initWiFi() {
   Serial.println(WiFi.localIP());
 }
 
-void connectToWebsite
+bool sendRequest() {
+  if(WiFi.status() != WL_CONNECTED) {
+    Serial.print("Not connected to the WiFi");
+    return false;
+  }
+
+  HTTPClient http;
+  http.begin(domain);
+
+  int httpResponseCode = http.GET();
+  
+  if(httpResponseCode > 0) {
+    Serial.print("Response code");
+    Serial.print(httpResponseCode);
+  }
+  
+  http.end();
+  
+  return true;
+}
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  while(!sendRequest()) {
+    delay(500);
+  }
 }
