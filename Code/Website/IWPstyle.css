@@ -36,7 +36,7 @@ ul {
 	margin-bottom: 10px;
 }
 
-li {
+.Navigation {
 	display: inline;
 	background-color: #5FCE68;
 	border: 2px solid #204422;
@@ -51,12 +51,26 @@ div {
 	border-radius: 5px;
 }
 
-#LoginButton {
+.LoginButton {
 	float: right;
+	display: inline;
+	background-color: #5FCE68;
+	border: 2px solid #204422;
+	border-radius: 5px;
+	padding: 5px;
 }
 
 #Introduction {
 	margin-bottom: 20px;
+}
+
+#Tutorial {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+h1 {
+	text-align: center;
 }
 
 #Selection {
