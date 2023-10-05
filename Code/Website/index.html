@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>IWaterPlant</title>
+	<link href="IWPstyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="background">
+		<div class="blur">
+			<script src="script.js"></script>
+			
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li class="LoginButton"><a href="login.html">Login</a></li>
+				<li class="LoginButton"><a href="signup.html">Sign up</a></li>
+			</ul> 
+
+			<div id="Introduction">
+				<h1>4WBB0 - Engineering design - group 249 - IWaterPlant</h1>
+			</div>
+			
+			<div id="Selection">
+				<label for="plantname">What kind of plant do you have: </label>
+				<input type="text" id="plantname" name="plantname"></input><br><br>
+				<button type="button" id="submitPlant" name="submitPlant" onclick="submitPlant()">Submit</button><br><br>
+				<p><span id="details"></span></p>
+			</div>
+			
+			<div id="Result">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
