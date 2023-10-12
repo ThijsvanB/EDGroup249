@@ -29,7 +29,7 @@
 				
 					$db_servername = "localhost";
 					$db_username = "id21351227_thijsvb";
-					$db_password = "tHijS78@";
+					$db_password = "";
 					
 					$conn = new mysqli($db_servername, $db_username, $db_password);
 					if($conn->connect_error) {
