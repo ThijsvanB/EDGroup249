@@ -1,9 +1,8 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$device_id = $_POST["device_id"];
-	$sensor_value = $_POST["sensor_value"];
-	
-	file_put_contents('data.txt', $device_id . " + " . $sensor_value);
+	$plant_name = $_POST["plant_name"];
+	$plant_id = $_POST["plant_id"];
 	
 	$db_servername = "localhost";
 	$db_username = "id21351227_thijsvb";
@@ -17,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	$conn->query("USE id21351227_users");
 	
-	$sql = "UPDATE users SET sensor_value = " . $sensor_value . " WHERE device_id = " . $device_id . ";";
+	$sql = "UPDATE users SET plant_name = '" . $plant_name . "', plant_id = " . $plant_id . " WHERE device_id = " . $device_id . ";";
 	if($conn->query($sql) === TRUE) {
 		echo "Record updated successfully";
 	} else {

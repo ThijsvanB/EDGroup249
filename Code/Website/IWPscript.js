@@ -68,6 +68,15 @@ function clickHandler(evt) {
 	x.appendChild(p);
 	
 	x.style.display = "block";
+	
+	console.log("HERE");
+	
+	fetch("https://iwaterplant.000webhostapp.com/IWP_register_plant.php", {
+		method: "POST",
+		body: "device_id=101&plant_name=FROMRose&plant_id=2"
+	}).then(response => console.log(response));
+	
+	console.log("HERE");
 }
 
 function onMessage(event) {
