@@ -110,10 +110,13 @@ int get_water_requirement() {
     delay(1000);
   }
 
+  String result = String(-1);
+
   if(httpResponseCode > 0) {
     Serial.print("Response code");
     Serial.println(httpResponseCode);
     Serial.println(http.getString());
+    result = http.getString();
   }
   else {
     Serial.print("Error code: ");
@@ -121,6 +124,8 @@ int get_water_requirement() {
   }
   
   http.end();
+
+  return result;
 }
 
 void loop() {
