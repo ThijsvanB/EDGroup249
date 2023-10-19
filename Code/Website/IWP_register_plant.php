@@ -4,6 +4,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$plant_name = $_POST["plant_name"];
 	$plant_id = $_POST["plant_id"];
 	
+	echo $device_id;
+	echo $plant_name;
+	echo $plant_id;
+	
 	$db_servername = "localhost";
 	$db_username = "id21351227_thijsvb";
 	$db_password = "tHijS78@";

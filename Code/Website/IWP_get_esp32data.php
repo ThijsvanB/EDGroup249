@@ -10,7 +10,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 	if($conn->connect_error) {
 		die("Connection falied: " . $conn->connect_error);
 	}
-	echo "connected";
 	
 	$conn->query("USE id21351227_users");
 	

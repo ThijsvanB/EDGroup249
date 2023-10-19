@@ -71,10 +71,30 @@ function clickHandler(evt) {
 	
 	console.log("HERE");
 	
-	fetch("https://iwaterplant.000webhostapp.com/IWP_register_plant.php", {
-		method: "POST",
-		body: "device_id=101&plant_name=FROMRose&plant_id=2"
-	}).then(response => console.log(response));
+	const headers = {
+        "User-Agent": "ESP32 Client",
+        "content-type": "application/x-www-form-urlencoded"
+    };
+
+    const data = "device_id=101&plant_name=Rose23&plant_id=123";
+
+    fetch("https://iwaterplant.000webhostapp.com/IWP_register_plant.php", {
+        method: "POST",
+        headers: headers,
+        body: data
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error: " + response.status);
+        }
+        return response.text();
+    })
+    .then(responseText => {
+        console.log(responseText);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 	
 	console.log("HERE");
 }
